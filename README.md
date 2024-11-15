@@ -1,6 +1,11 @@
-# Genshin Impact Artifact Optimizer
+# Genshin Impact Artifact Recommendation
 
-A comprehensive tool for optimizing and evaluating artifacts in Genshin Impact. This application helps players calculate artifact effectiveness across different characters and provides character-specific recommendations.
+A comprehensive tool for analyzing and recommending artifacts in Genshin Impact. This application helps players evaluate artifact effectiveness across different characters and provides character-specific recommendations.
+
+## Credits
+
+- **Code Development**: This application was developed with the assistance of AI (Codeium)
+- **Artifact Weights**: The character-specific weights and recommendations are based on community guides and theorycrafting resources, not AI-generated
 
 ## Features
 
@@ -16,7 +21,7 @@ A comprehensive tool for optimizing and evaluating artifacts in Genshin Impact. 
 - Dynamic character list with priorities
 - Easy-to-use interface for managing artifact set recommendations
 
-### New! Artifact Import and Analysis
+### Artifact Import and Analysis
 - Import artifacts directly from GOOD (Genshin Open Object Description) format JSON
 - Support for GO (Genshin Optimizer) exported artifacts
 - Visual card display of level 20 artifacts showing:
@@ -45,7 +50,7 @@ A comprehensive tool for optimizing and evaluating artifacts in Genshin Impact. 
 
 ## Supported Features
 - All artifact sets from version 4.3
-- Character-specific stat weightings
+- Character-specific stat weightings based on community guides
 - Theoretical max substat calculations
 - Percentage-based scoring system
 - GOOD format JSON import
@@ -65,7 +70,7 @@ A comprehensive tool for optimizing and evaluating artifacts in Genshin Impact. 
 
 ## Contributing
 Feel free to contribute by:
-- Adding new character weights
+- Adding new character weights (with guide references)
 - Updating artifact set recommendations
 - Improving the scoring algorithm
 - Enhancing the UI/UX

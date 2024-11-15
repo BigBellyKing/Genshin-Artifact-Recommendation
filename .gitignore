@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+dist/
+*.egg-info/
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*~
+
+# Operating System
+.DS_Store
+Thumbs.db
+
+# User artifacts
+artifacts.json
