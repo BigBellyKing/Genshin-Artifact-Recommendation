@@ -1,0 +1,538 @@
+{
+    "Archaic Petra": {
+        "2pc": "Geo DMG Bonus +15%",
+        "4pc": "Upon obtaining an Elemental Shard created through a Crystallize Reaction, all party members gain 35% DMG Bonus for that particular element for 10s.",
+        "recommended_for": [
+            "Traveler (Geo)",
+            "Ningguang",
+            "Itto",
+            "Navia"
+        ],
+        "priority": {
+            "Traveler (Geo)": 0.8,
+            "Ningguang": 0.8,
+            "Itto": 0.8,
+            "Navia": 0.8
+        }
+    },
+    "Blizzard Strayer": {
+        "2pc": "Cryo DMG Bonus +15%",
+        "4pc": "When a character attacks an opponent affected by Cryo, their CRIT Rate is increased by 20%. If the opponent is Frozen, CRIT Rate is increased by an additional 20%.",
+        "recommended_for": [
+            "Ganyu",
+            "Rosaria",
+            "Kaeya",
+            "Ayaka",
+            "Aloy",
+            "Freminet",
+            "Wriothesley"
+        ],
+        "priority": {
+            "Ganyu": 1.0,
+            "Rosaria": 1.0,
+            "Kaeya": 1.0,
+            "Ayaka": 1.0,
+            "Aloy": 1.0,
+            "Freminet": 1.0,
+            "Wriothesley": 0.8
+        }
+    },
+    "Crimson Witch of Flames": {
+        "2pc": "Pyro DMG Bonus +15%",
+        "4pc": "Increases Overloaded and Burning DMG by 40%. Increases Vaporize and Melt DMG by 15%. Using Elemental Skill increases 2-Piece Set effects by 50% for 10s. Max 3 stacks.",
+        "recommended_for": [
+            "Hu Tao",
+            "Yanfei",
+            "Diluc",
+            "Klee",
+            "Gaming",
+            "Xiangling",
+            "Yoimiya",
+            "Lyney"
+        ],
+        "priority": {
+            "Hu Tao": 1.0,
+            "Yanfei": 1.0,
+            "Diluc": 1.0,
+            "Klee": 1.0,
+            "Gaming": 0.8,
+            "Xiangling": 0.8,
+            "Yoimiya": 0.8,
+            "Lyney": 0.8
+        }
+    },
+    "Deepwood Memories": {
+        "2pc": "Dendro DMG Bonus +15%",
+        "4pc": "After Elemental Skills or Bursts hit opponents, the targets' Dendro RES will be decreased by 30% for 8s.",
+        "recommended_for": [
+            "Collei",
+            "Tighnari",
+            "Emilie",
+            "Nahida",
+            "Traveler (Dendro)",
+            "Yaoyao",
+            "Baizhu"
+        ],
+        "priority": {
+            "Collei": 1.0,
+            "Tighnari": 1.0,
+            "Emilie": 1.0,
+            "Nahida": 1.0,
+            "Traveler (Dendro)": 1.0,
+            "Yaoyao": 1.0,
+            "Baizhu": 1.0
+        }
+    },
+    "Desert Pavilion Chronicle": {
+        "2pc": "Anemo DMG Bonus +15%",
+        "4pc": "When charged attacks hit opponents, the equipping character's Normal Attack SPD will be increased by 10% while Normal Attack DMG will be increased by 40% for 15s.",
+        "recommended_for": [
+            "Wanderer",
+            "Xianyun"
+        ],
+        "priority": {
+            "Wanderer": 1.0,
+            "Xianyun": 1.0
+        }
+    },
+    "Echoes of an Offering": {
+        "2pc": "ATK +18%",
+        "4pc": "When Normal Attacks hit opponents, there is a 36% chance that it will trigger Valley Rite, which will increase Normal Attack DMG by 70% of ATK.",
+        "recommended_for": [
+            "Ayato"
+        ],
+        "priority": {
+            "Ayato": 1.0
+        }
+    },
+    "Emblem of Severed Fate": {
+        "2pc": "Energy Recharge +20%",
+        "4pc": "Increases Elemental Burst DMG by 25% of Energy Recharge. A maximum of 75% bonus DMG can be obtained in this way.",
+        "recommended_for": [
+            "Lisa",
+            "Xiangling",
+            "Xingqiu",
+            "Mona",
+            "Beidou",
+            "Yelan",
+            "Raiden",
+            "Xinyan",
+            "Traveler (Geo)",
+            "Candace",
+            "Sigewinne",
+            "Gorou",
+            "Sara"
+        ],
+        "priority": {
+            "Lisa": 1.0,
+            "Xiangling": 1.0,
+            "Xingqiu": 1.0,
+            "Mona": 1.0,
+            "Beidou": 1.0,
+            "Yelan": 1.0,
+            "Raiden": 1.0,
+            "Xinyan": 1.0,
+            "Traveler (Geo)": 1.0,
+            "Candace": 1.0,
+            "Sigewinne": 1.0,
+            "Gorou": 1.0,
+            "Sara": 1.0
+        }
+    },
+    "Flower of Paradise Lost": {
+        "2pc": "Elemental Mastery +80",
+        "4pc": "The equipping character's Bloom, Hyperbloom, and Burgeon reaction DMG are increased by 40%. Additionally, after triggering Bloom, Hyperbloom, or Burgeon, the character gains another 25% bonus to the effect for 10s.",
+        "recommended_for": [
+            "Kaveh",
+            "Thoma",
+            "Shinobu"
+        ],
+        "priority": {
+            "Kaveh": 1.0,
+            "Thoma": 1.0,
+            "Shinobu": 1.0
+        }
+    },
+    "Fragment of Harmonic Whimsy": {
+        "2pc": "ATK +18%",
+        "4pc": "When the value of a Bond of Life increases or decreases, this character deals 18% increased DMG for 6s. Max 3 stacks.",
+        "recommended_for": [
+            "Clorinde",
+            "Arlecchino"
+        ],
+        "priority": {
+            "Clorinde": 1.0,
+            "Arlecchino": 1.0
+        }
+    },
+    "Gilded Dreams": {
+        "2pc": "Elemental Mastery +80",
+        "4pc": "Within 8s of triggering an Elemental Reaction, the character equipping this will obtain buffs based on the Elemental Type of the other party members.",
+        "recommended_for": [
+            "Lisa",
+            "Fischl",
+            "Razor",
+            "Cyno",
+            "Alhaitham"
+        ],
+        "priority": {
+            "Lisa": 1.0,
+            "Fischl": 1.0,
+            "Razor": 1.0,
+            "Cyno": 1.0,
+            "Alhaitham": 1.0
+        }
+    },
+    "Gladiator's Finale": {
+        "2pc": "ATK +18%",
+        "4pc": "If the wielder of this artifact set uses a Sword, Claymore or Polearm, increases their Normal Attack DMG by 35%.",
+        "recommended_for": [],
+        "priority": {}
+    },
+    "Golden Troupe": {
+        "2pc": "Elemental Skill DMG +20%",
+        "4pc": "Increases Elemental Skill DMG by 25%. Additionally when not on the field, Elemental Skill DMG will be further increased by 25%. This effect will be cleared 2s after taking the field.",
+        "recommended_for": [
+            "Yae Miko",
+            "Traveler (Hydro)",
+            "Furina",
+            "Fischl",
+            "Albedo",
+            "Chiori"
+        ],
+        "priority": {
+            "Yae Miko": 1.0,
+            "Traveler (Hydro)": 1.0,
+            "Furina": 1.0,
+            "Fischl": 1.0,
+            "Albedo": 1.0,
+            "Chiori": 1.0
+        }
+    },
+    "Heart of Depth": {
+        "2pc": "Hydro DMG Bonus +15%",
+        "4pc": "After using Elemental Skill, increases Normal Attack and Charged Attack DMG by 30% for 15s.",
+        "recommended_for": [
+            "Ayato",
+            "Traveler (Hydro)"
+        ],
+        "priority": {
+            "Ayato": 1.0,
+            "Traveler (Hydro)": 1.0
+        }
+    },
+    "Husk of Opulent Dreams": {
+        "2pc": "DEF +30%",
+        "4pc": "A character equipped with this Artifact set will obtain the Curiosity effect when on the field, gaining 6% DEF and 6% Geo DMG every 0.3s. Max 4 stacks.",
+        "recommended_for": [
+            "Noelle",
+            "Albedo",
+            "Itto",
+            "Chiori",
+            "Yun Jin",
+            "Gorou"
+        ],
+        "priority": {
+            "Noelle": 1.0,
+            "Albedo": 1.0,
+            "Itto": 1.0,
+            "Chiori": 1.0,
+            "Yun Jin": 1.0,
+            "Gorou": 1.0
+        }
+    },
+    "Lavawalker": {
+        "2pc": "",
+        "4pc": "Increases DMG against opponents affected by Pyro by 35%.",
+        "recommended_for": [],
+        "priority": {}
+    },
+    "Marechaussee Hunter": {
+        "2pc": "Normal and Charged Attack DMG +15%",
+        "4pc": "When current HP increases or decreases, CRIT Rate will be increased by 12% for 5s. Max 3 stacks.",
+        "recommended_for": [
+            "Gaming",
+            "Hu Tao",
+            "Diluc",
+            "Lyney",
+            "Wriothesley",
+            "Neuvillette",
+            "Noelle",
+            "Xiao",
+            "Wanderer"
+        ],
+        "priority": {
+            "Gaming": 1.0,
+            "Hu Tao": 1.0,
+            "Diluc": 1.0,
+            "Lyney": 1.0,
+            "Wriothesley": 1.0,
+            "Neuvillette": 1.0,
+            "Noelle": 1.0,
+            "Xiao": 1.0,
+            "Wanderer": 1.0
+        }
+    },
+    "Nighttime Whispers in the Echoing Woods": {
+        "2pc": "ATK +18%",
+        "4pc": "After using an Elemental Skill, gain a 20% Geo DMG Bonus for 10s. While under a shield granted by the Crystallize reaction, the above effect will be increased by 150%, and this additional increase disappears 1s after that shield is lost.",
+        "recommended_for": [
+            "Ningguang",
+            "Navia"
+        ],
+        "priority": {
+            "Ningguang": 1.0,
+            "Navia": 1.0
+        }
+    },
+    "Noblesse Oblige": {
+        "2pc": "Elemental Burst DMG +20%",
+        "4pc": "Using an Elemental Burst increases all party members' ATK by 20% for 12s.",
+        "recommended_for": [
+            "Amber",
+            "Chongyun",
+            "Bennett",
+            "Chevreuse",
+            "Dori",
+            "Mona",
+            "Diona",
+            "Mika",
+            "Charlotte",
+            "Shenhe",
+            "Traveler (Electro)"
+        ],
+        "priority": {
+            "Amber": 1.0,
+            "Chongyun": 1.0,
+            "Bennett": 1.0,
+            "Chevreuse": 1.0,
+            "Dori": 1.0,
+            "Mona": 1.0,
+            "Diona": 1.0,
+            "Mika": 1.0,
+            "Charlotte": 1.0,
+            "Shenhe": 1.0,
+            "Traveler (Electro)": 1.0
+        }
+    },
+    "Nymph's Dream": {
+        "2pc": "Hydro DMG bonus +15%",
+        "4pc": "After Normal, Charged, and Plunging Attacks, Elemental Skills, and Elemental Bursts hit opponents, 1 stack of Mirrored Nymph will be triggered, lasting 8s. When under the effect of 1, 2, or 3 or more Mirrored Nymph Stacks, ATK will be increased by 7%/16%/25%, and Hydro DMG bonus will be increased by 4%/9%/15%. Mirrored Nymph stacks created by Normal, Charged, and Plunging Attacks, Elemental Skills, and Elemental Bursts exist independently.",
+        "recommended_for": [
+            "Tartaglia",
+            "Ayato"
+        ],
+        "priority": {
+            "Tartaglia": 1.0,
+            "Ayato": 1.0
+        }
+    },
+    "Obsidian Codex": {
+        "2pc": "While the equipping character is in Nightsoul's Blessing and is on the field, their DMG dealt is increased by 15%.",
+        "4pc": "After the equipping character consumes 1 Nightsoul point while on the field, CRIT Rate increases by 40% for 6s. This effect can trigger once every second.",
+        "recommended_for": [
+            "Kinich",
+            "Mualani"
+        ],
+        "priority": {
+            "Kinich": 1.0,
+            "Mualani": 1.0
+        }
+    },
+    "Ocean-Hued Clam": {
+        "2pc": "Healing Bonus +15%",
+        "4pc": "When the character equipping this artifact set heals a character in the party, a Sea-Dyed Foam will appear for 3 seconds, accumulating the amount of HP recovered from healing. At the end of the duration, the foam will explode, dealing DMG to nearby opponents.",
+        "recommended_for": [
+            "Kokomi",
+            "Sigewinne",
+            "Barbara"
+        ],
+        "priority": {
+            "Kokomi": 1.0,
+            "Sigewinne": 1.0,
+            "Barbara": 1.0
+        }
+    },
+    "Pale Flame": {
+        "2pc": "Physical DMG Bonus +25%",
+        "4pc": "When an Elemental Skill hits an opponent, ATK is increased by 9% for 7s. This effect stacks up to 2 times and can be triggered once every 0.3s. Once 2 stacks are reached, the 2-set effect is increased by 100%.",
+        "recommended_for": [
+            "Razor",
+            "Eula",
+            "Freminet",
+            "Xinyan"
+        ],
+        "priority": {
+            "Razor": 1.0,
+            "Eula": 1.0,
+            "Freminet": 1.0,
+            "Xinyan": 1.0
+        }
+    },
+    "Retracing Bolide": {
+        "2pc": "Shield Strength +35%",
+        "4pc": "While protected by a shield, gain an additional 40% Normal and Charged Attack DMG.",
+        "recommended_for": [],
+        "priority": {}
+    },
+    "Scroll of the Hero of Cinder City": {
+        "2pc": "When a nearby party member triggers a Nightsoul Burst, the equipping character regenerates 6 Elemental Energy.",
+        "4pc": "After the equipping character triggers a reaction, all nearby party members gain a 12% Elemental DMG Bonus for the involved Elemental Types for 15s. If the equipping character is in the Nightsoul's Blessing state when triggering this effect, all party members gain an additional 28% Elemental DMG bonus for the Elemental Types involved in the reaction for 20s.",
+        "recommended_for": [
+            "Kachina"
+        ],
+        "priority": {
+            "Kachina": 1.0
+        }
+    },
+    "Shimenawa's Reminiscence": {
+        "2pc": "ATK +18%",
+        "4pc": "When casting an Elemental Skill, if the character has 15 or more Energy, they lose 15 Energy and Normal/Charged/Plunging Attack DMG is increased by 50% for 10s.",
+        "recommended_for": [
+            "Ganyu",
+            "Yoimiya"
+        ],
+        "priority": {
+            "Ganyu": 1.0,
+            "Yoimiya": 1.0
+        }
+    },
+    "Song of Days Past": {
+        "2pc": "Healing Bonus +15%",
+        "4pc": "When the equipping character heals a party member, the Yearning effect will be created for 6s, which records the total amount of healing provided (including overflow healing). When the duration expires, the Yearning effect will be transformed into the Waves of Days Past effect: When your active party member hits an opponent with a Normal Attack, Charged Attack, Plunging Attack, Elemental Skill, or Elemental Burst, the DMG dealt will be increased by 8% of the total healing amount recorded by the Yearning effect. The Waves of Days Past effect is removed after it has taken effect 5 times or after 10s. A single instance of the Yearning effect can record up to 15,000 healing, and only a single instance can exist at once, but it can record the healing from multiple equipping characters. Equipping characters on standby can still trigger this effect.",
+        "recommended_for": [
+            "Sigewinne"
+        ],
+        "priority": {
+            "Sigewinne": 1.0
+        }
+    },
+    "Tenacity of the Millelith": {
+        "2pc": "HP +20%",
+        "4pc": "When an Elemental Skill hits an opponent, the ATK of all nearby party members is increased by 20% and their Shield Strength is increased by 30% for 3s.",
+        "recommended_for": [
+            "Dehya",
+            "Kokomi",
+            "Layla",
+            "Qiqi",
+            "Faruzan",
+            "Zhongli",
+            "Nilou",
+            "Yaoyao",
+            "Kirara"
+        ],
+        "priority": {
+            "Dehya": 1.0,
+            "Kokomi": 1.0,
+            "Layla": 1.0,
+            "Qiqi": 1.0,
+            "Faruzan": 1.0,
+            "Zhongli": 1.0,
+            "Nilou": 1.0,
+            "Yaoyao": 1.0,
+            "Kirara": 1.0
+        }
+    },
+    "Thundering Fury": {
+        "2pc": "Electro DMG Bonus +15%",
+        "4pc": "Increases DMG caused by Overloaded, Electro-Charged, Superconduct, and Hyperbloom by 40%, and the DMG Bonus conferred by Aggravate is increased by 20%. When Quicken or the aforementioned Elemental Reactions are triggered, Elemental Skill CD is decreased by 1s. Can only occur once every 0.8s.",
+        "recommended_for": [
+            "Lisa",
+            "Keqing",
+            "Cyno",
+            "Clorinde"
+        ],
+        "priority": {
+            "Lisa": 1.0,
+            "Keqing": 1.0,
+            "Cyno": 1.0,
+            "Clorinde": 1.0
+        }
+    },
+    "Thundersoother": {
+        "2pc": "Electro RES increased by 40%.",
+        "4pc": "Increases DMG against opponents affected by Electro by 35%.",
+        "recommended_for": [],
+        "priority": {}
+    },
+    "Unfinished Reverie": {
+        "2pc": "ATK+18%",
+        "4pc": "After leaving combat for 3s, DMG dealt increases by 50%. In combat, if no Burning opponents are nearby for more than 6s, this DMG Bonus will decrease by 10% per second until it reaches 0%. When a Burning opponent exists, it will increase by 10% instead until it reaches 50%. This effect still triggers if the equipping character is off-field.",
+        "recommended_for": [
+            "Emilie",
+            "Kinich"
+        ],
+        "priority": {
+            "Emilie": 1.0,
+            "Kinich": 0.8
+        }
+    },
+    "Vermillion Hereafter": {
+        "2pc": "ATK +18%",
+        "4pc": "After using an Elemental Burst, this character will gain the Nascent Light effect, increasing their ATK by 8% for 16s. When the character's HP decreases, their ATK will be further increased by 10%. This increase can occur this way maximum of 4 times. This effect can be triggered once every 0.8s.",
+        "recommended_for": [
+            "Xiao"
+        ],
+        "priority": {
+            "Xiao": 1.0
+        }
+    },
+    "Viridescent Venerer": {
+        "2pc": "Anemo DMG Bonus +15%",
+        "4pc": "Increases Swirl DMG by 60%. Decreases opponent's Elemental RES to the element infused in the Swirl by 40% for 10s.",
+        "recommended_for": [
+            "Heizou",
+            "Lynette",
+            "Venti",
+            "Kazuha",
+            "Sucrose",
+            "Jean",
+            "Faruzan",
+            "Sayu",
+            "Traveler (Anemo)",
+            "Xianyun",
+            "Xiao"
+        ],
+        "priority": {
+            "Heizou": 1.0,
+            "Lynette": 1.0,
+            "Venti": 1.0,
+            "Kazuha": 1.0,
+            "Sucrose": 1.0,
+            "Jean": 1.0,
+            "Faruzan": 1.0,
+            "Sayu": 1.0,
+            "Traveler (Anemo)": 1.0,
+            "Xianyun": 1.0,
+            "Xiao": 0.8
+        }
+    },
+    "Vourukasha's Glow": {
+        "2pc": "HP +20%",
+        "4pc": "Elemental Skill and Elemental Burst DMG will be increased by 10%. After the equipping character takes DMG, the aforementioned DMG Bonus is increased by 80% for 5s. This effect increase can have 5 stacks. The duration of each stack is counted independently. These effects can be triggered even when the equipping character is not on the field.",
+        "recommended_for": [
+            "Nilou",
+            "Kirara"
+        ],
+        "priority": {
+            "Nilou": 1.0,
+            "Kirara": 1.0
+        }
+    },
+    "Wanderer's Troupe": {
+        "2pc": "Elemental Mastery +80",
+        "4pc": "Increases Charged Attack DMG by 35% if the character uses a Catalyst or Bow.",
+        "recommended_for": [
+            "Sethos",
+            "Aloy",
+            "Tighnari",
+            "Ganyu"
+        ],
+        "priority": {
+            "Sethos": 1.0,
+            "Aloy": 1.0,
+            "Tighnari": 1.0,
+            "Ganyu": 1.0
+        }
+    }
+}
