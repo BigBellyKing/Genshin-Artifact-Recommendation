@@ -65,6 +65,58 @@ class SetConfigurator:
         # Populate set listbox
         for set_name in sorted(self.artifact_sets.keys()):
             self.set_listbox.insert(tk.END, set_name)
+
+        # Add to ATK +18% Sets button
+        ttk.Button(
+            left_panel,
+            text="Add to ATK +18% Sets",
+            command=self.add_to_atk_sets,
+            padding=(20, 5)
+        ).grid(row=1, column=0, pady=10)
+
+        # Add to EM +80 Sets button
+        ttk.Button(
+            left_panel,
+            text="Add to EM +80 Sets",
+            command=self.add_to_em_sets,
+            padding=(20, 5)
+        ).grid(row=2, column=0, pady=10)
+
+        # Add to HP +20% Sets button
+        ttk.Button(
+            left_panel,
+            text="Add to HP +20% Sets",
+            command=self.add_to_hp_sets,
+            padding=(20, 5)
+        ).grid(row=3, column=0, pady=10)
+
+        # Bulk Remove Buttons
+        ttk.Label(
+            left_panel,
+            text="Bulk Remove:",
+            style='Header.TLabel'
+        ).grid(row=4, column=0, pady=(20, 5), sticky=tk.W)
+
+        ttk.Button(
+            left_panel,
+            text="Remove from ATK +18% Sets",
+            command=self.remove_from_atk_sets,
+            padding=(20, 5)
+        ).grid(row=5, column=0, pady=10)
+
+        ttk.Button(
+            left_panel,
+            text="Remove from EM +80 Sets",
+            command=self.remove_from_em_sets,
+            padding=(20, 5)
+        ).grid(row=6, column=0, pady=10)
+
+        ttk.Button(
+            left_panel,
+            text="Remove from HP +20% Sets",
+            command=self.remove_from_hp_sets,
+            padding=(20, 5)
+        ).grid(row=7, column=0, pady=10)
         
         # Right panel - Set details and configuration
         right_panel = ttk.LabelFrame(
@@ -108,10 +160,14 @@ class SetConfigurator:
             text="Priority:",
             style='Header.TLabel'
         ).grid(row=2, column=0, pady=5, sticky=tk.W)
-        
+
         self.priority_combo = ttk.Combobox(
             right_panel,
-            values=["1.0 (Best in Slot)", "0.8 (Alternative)"],
+            values=[
+                "1.0 (Best in Slot)",
+                "0.9 (Strong Alternative)",
+                "0.8 (Viable Option)"
+            ],
             width=25,
             font=('Segoe UI', 10),
             state='readonly'
@@ -196,7 +252,13 @@ class SetConfigurator:
             messagebox.showwarning("Warning", "Please select a priority.")
             return
             
-        priority = 1.0 if "1.0" in priority_str else 0.8
+        # Extract priority value from the string
+        if "1.0" in priority_str:
+            priority = 1.0
+        elif "0.9" in priority_str:
+            priority = 0.9
+        else:
+            priority = 0.8
         
         set_name = self.set_listbox.get(selected_indices[0])
         set_data = self.artifact_sets[set_name]
@@ -262,6 +324,177 @@ class SetConfigurator:
             # No matches found, keep the text but show all characters
             self.char_combo['values'] = self.characters
             self.char_combo.set(current_text)
+
+    def add_to_atk_sets(self):
+        char = self.char_combo.get()
+        if not char or char not in self.characters:
+            messagebox.showwarning("Warning", "Please select a valid character.")
+            return
+            
+        priority_str = self.priority_combo.get()
+        if not priority_str:
+            messagebox.showwarning("Warning", "Please select a priority.")
+            return
+            
+        # Extract priority value from the string
+        if "1.0" in priority_str:
+            priority = 1.0
+        elif "0.9" in priority_str:
+            priority = 0.9
+        else:
+            priority = 0.8
+        
+        # Find all sets with 2pc ATK +18%
+        atk_sets = [name for name, data in self.artifact_sets.items() if data["2pc"] == "ATK +18%"]
+        
+        # Add character to all ATK +18% sets
+        for set_name in atk_sets:
+            set_data = self.artifact_sets[set_name]
+            if char not in set_data["recommended_for"]:
+                set_data["recommended_for"].append(char)
+            set_data["priority"][char] = priority
+        
+        self.on_set_select(None)  # Refresh display
+        messagebox.showinfo("Success", f"Added {char} to {len(atk_sets)} ATK +18% sets!")
+
+    def add_to_em_sets(self):
+        char = self.char_combo.get()
+        if not char or char not in self.characters:
+            messagebox.showwarning("Warning", "Please select a valid character.")
+            return
+            
+        priority_str = self.priority_combo.get()
+        if not priority_str:
+            messagebox.showwarning("Warning", "Please select a priority.")
+            return
+            
+        # Extract priority value from the string
+        if "1.0" in priority_str:
+            priority = 1.0
+        elif "0.9" in priority_str:
+            priority = 0.9
+        else:
+            priority = 0.8
+        
+        # Find all sets with 2pc EM +80
+        em_sets = [name for name, data in self.artifact_sets.items() if data["2pc"] == "Elemental Mastery +80"]
+        
+        # Add character to all EM +80 sets
+        for set_name in em_sets:
+            set_data = self.artifact_sets[set_name]
+            if char not in set_data["recommended_for"]:
+                set_data["recommended_for"].append(char)
+            set_data["priority"][char] = priority
+        
+        self.on_set_select(None)  # Refresh display
+        messagebox.showinfo("Success", f"Added {char} to {len(em_sets)} EM +80 sets!")
+
+    def add_to_hp_sets(self):
+        char = self.char_combo.get()
+        if not char or char not in self.characters:
+            messagebox.showwarning("Warning", "Please select a valid character.")
+            return
+            
+        priority_str = self.priority_combo.get()
+        if not priority_str:
+            messagebox.showwarning("Warning", "Please select a priority.")
+            return
+            
+        # Extract priority value from the string
+        if "1.0" in priority_str:
+            priority = 1.0
+        elif "0.9" in priority_str:
+            priority = 0.9
+        else:
+            priority = 0.8
+        
+        # Find all sets with 2pc HP +20%
+        hp_sets = [name for name, data in self.artifact_sets.items() if data["2pc"] == "HP +20%"]
+        
+        # Add character to all HP +20% sets
+        for set_name in hp_sets:
+            set_data = self.artifact_sets[set_name]
+            if char not in set_data["recommended_for"]:
+                set_data["recommended_for"].append(char)
+            set_data["priority"][char] = priority
+        
+        self.on_set_select(None)  # Refresh display
+        messagebox.showinfo("Success", f"Added {char} to {len(hp_sets)} HP +20% sets!")
+
+    def remove_from_atk_sets(self):
+        char = self.char_combo.get()
+        if not char or char not in self.characters:
+            messagebox.showwarning("Warning", "Please select a valid character.")
+            return
+        
+        # Find all sets with 2pc ATK +18%
+        atk_sets = [name for name, data in self.artifact_sets.items() if data["2pc"] == "ATK +18%"]
+        removed_count = 0
+        
+        # Remove character from all ATK +18% sets
+        for set_name in atk_sets:
+            set_data = self.artifact_sets[set_name]
+            if char in set_data["recommended_for"]:
+                set_data["recommended_for"].remove(char)
+                if char in set_data["priority"]:
+                    del set_data["priority"][char]
+                removed_count += 1
+        
+        self.on_set_select(None)  # Refresh display
+        if removed_count > 0:
+            messagebox.showinfo("Success", f"Removed {char} from {removed_count} ATK +18% sets!")
+        else:
+            messagebox.showinfo("Info", f"{char} was not found in any ATK +18% sets.")
+
+    def remove_from_em_sets(self):
+        char = self.char_combo.get()
+        if not char or char not in self.characters:
+            messagebox.showwarning("Warning", "Please select a valid character.")
+            return
+        
+        # Find all sets with 2pc EM +80
+        em_sets = [name for name, data in self.artifact_sets.items() if data["2pc"] == "Elemental Mastery +80"]
+        removed_count = 0
+        
+        # Remove character from all EM +80 sets
+        for set_name in em_sets:
+            set_data = self.artifact_sets[set_name]
+            if char in set_data["recommended_for"]:
+                set_data["recommended_for"].remove(char)
+                if char in set_data["priority"]:
+                    del set_data["priority"][char]
+                removed_count += 1
+        
+        self.on_set_select(None)  # Refresh display
+        if removed_count > 0:
+            messagebox.showinfo("Success", f"Removed {char} from {removed_count} EM +80 sets!")
+        else:
+            messagebox.showinfo("Info", f"{char} was not found in any EM +80 sets.")
+
+    def remove_from_hp_sets(self):
+        char = self.char_combo.get()
+        if not char or char not in self.characters:
+            messagebox.showwarning("Warning", "Please select a valid character.")
+            return
+        
+        # Find all sets with 2pc HP +20%
+        hp_sets = [name for name, data in self.artifact_sets.items() if data["2pc"] == "HP +20%"]
+        removed_count = 0
+        
+        # Remove character from all HP +20% sets
+        for set_name in hp_sets:
+            set_data = self.artifact_sets[set_name]
+            if char in set_data["recommended_for"]:
+                set_data["recommended_for"].remove(char)
+                if char in set_data["priority"]:
+                    del set_data["priority"][char]
+                removed_count += 1
+        
+        self.on_set_select(None)  # Refresh display
+        if removed_count > 0:
+            messagebox.showinfo("Success", f"Removed {char} from {removed_count} HP +20% sets!")
+        else:
+            messagebox.showinfo("Info", f"{char} was not found in any HP +20% sets.")
 
     def run(self):
         self.window.mainloop()

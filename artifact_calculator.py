@@ -204,14 +204,16 @@ class ArtifactScoreCalculator:
         substat_frame = ttk.LabelFrame(parent, text="Substats", padding="5")
         substat_frame.grid(row=3, column=0, columnspan=3, sticky=(tk.W, tk.E), pady=5)
 
-        self.substat_frames = []
+        self.substat_vars = []
+        self.substat_value_vars = []
         for i in range(4):
             ttk.Label(substat_frame, text=f"Substat {i+1}:").grid(row=i, column=0, sticky=tk.W, pady=2)
             stat_combo = ttk.Combobox(substat_frame, values=self.get_sub_stats(), width=15)
             stat_combo.grid(row=i, column=1, padx=3, pady=2)
             value_entry = ttk.Entry(substat_frame, width=8)
             value_entry.grid(row=i, column=2, padx=3, pady=2)
-            self.substat_frames.append((stat_combo, value_entry))
+            self.substat_vars.append(stat_combo)
+            self.substat_value_vars.append(value_entry)
 
         # Buttons
         button_frame = ttk.Frame(parent)
@@ -254,15 +256,18 @@ class ArtifactScoreCalculator:
             artifact_set = self.artifact_set.get()
             artifact_type = self.artifact_type.get()
             main_stat = self.main_stat.get()
-            substats = []
             
-            for stat_combo, value_entry in self.substat_frames:
-                stat = stat_combo.get()
-                value = value_entry.get()
-                if stat and value:
-                    substats.append((stat, float(value)))
+            # Get substats
+            substats = []
+            for i in range(4):
+                stat = self.substat_vars[i].get()
+                if stat:
+                    try:
+                        value = float(self.substat_value_vars[i].get())
+                        substats.append((stat, value))
+                    except ValueError:
+                        continue
 
-            # Calculate scores for each character
             scores = []
             for char_data in self.character_weights:
                 char_name = char_data["Character"].strip()
@@ -307,58 +312,100 @@ class ArtifactScoreCalculator:
                         if not has_recommended_sets:
                             set_multiplier = 0.8
 
-                # Apply formula: (Main + Sub) x Set Multiplier x 2.145
-                final_score = base_score * set_multiplier * 1
+                # Apply formula: (Main + Sub) x Set Multiplier
+                final_score = base_score * set_multiplier
 
-                scores.append((char_name, final_score))
+                # Calculate rank based on score and criteria
+                rank = self.calculate_rank(final_score, artifact_set, char_name, main_stat, substats)
+                
+                scores.append((char_name, final_score, rank))
 
-            # Sort scores and display top 5
+            # Sort scores and display
             scores.sort(key=lambda x: x[1], reverse=True)
-            
-            # Display all character scores with formatting
-            self.display_results(scores, artifact_info=f"Artifact Set: {artifact_set}\nArtifact Type: {artifact_type}\nMain Stat: {main_stat}\nSubstats: {', '.join([f'{stat}: {value}' for stat, value in substats])}")
+            self.display_results(scores, f"Set: {artifact_set}\nType: {artifact_type}\nMain: {main_stat}")
 
         except Exception as e:
-            messagebox.showerror("Error", f"An error occurred: {str(e)}")
+            messagebox.showerror("Error", str(e))
+
+    def calculate_rank(self, score, artifact_set, char_name, main_stat, substats):
+        """Calculate the rank (SS, S, A, B, or C) based on score and criteria."""
+        # Get character data
+        char_data = next((char for char in self.character_weights if char["Character"].strip() == char_name), None)
+        if not char_data:
+            return "C"
+
+        # Check if artifact set is recommended
+        is_correct_set = False
+        if artifact_set in self.artifact_sets:
+            set_data = self.artifact_sets[artifact_set]
+            is_correct_set = char_name in set_data["recommended_for"]
+
+        # Check if main stat is preferred
+        main_stat_key = f"Main {main_stat}"
+        has_correct_main = main_stat_key in char_data and float(char_data[main_stat_key]) > 0
+
+        # Calculate substat quality
+        total_substat_score = 0
+        max_possible = 0
+        for stat, value in substats:
+            stat_key = f"Sub {stat}"
+            if stat_key in char_data:
+                weight = float(char_data[stat_key])
+                max_value = self.max_substat_values.get(stat, 1)
+                relative_value = value / max_value
+                total_substat_score += relative_value * weight
+                max_possible += weight
+
+        substat_quality = total_substat_score / max_possible if max_possible > 0 else 0
+
+        # Determine rank based on criteria
+        if score >= 160 and is_correct_set and has_correct_main and substat_quality >= 0.7:
+            return "SS"
+        elif score >= 120 and is_correct_set and has_correct_main:
+            return "S"
+        elif score >= 80 and (is_correct_set or has_correct_main):
+            return "A"
+        elif score >= 40:
+            return "B"
+        else:
+            return "C"
 
     def display_results(self, scores, artifact_info=""):
+        """Display character rankings with formatting."""
         self.result_text.delete(1.0, tk.END)
         
-        # Display artifact info at the top
         if artifact_info:
-            self.result_text.insert(tk.END, f"{artifact_info}\n\n")
+            self.result_text.insert(tk.END, f"Artifact Info:\n{artifact_info}\n\n", "info")
         
-        # Display all character scores with formatting
         self.result_text.insert(tk.END, "Character Rankings:\n\n")
         
         # Find the maximum score for percentage calculation
         max_score = scores[0][1] if scores else 0
         
-        for i, (char, score) in enumerate(scores, 1):
+        for i, (char, score, rank) in enumerate(scores, 1):
             # Calculate percentage of max score
             percentage = (score / max_score * 100) if max_score > 0 else 0
             
-            # Format the rank with padding
-            rank = f"{i:2d}."
+            # Format the display
+            rank_display = f"{i:2d}."
+            char_display = f"{char:15}"
+            score_display = f"{score:5.1f} ({percentage:3.0f}%)"
             
-            # Format the character name with fixed width
-            char_name = f"{char:<15}"
+            line = f"{rank_display} {char_display} [{rank}] ➤ {score_display}\n"
             
-            # Format the score and percentage
-            score_text = f"{score:>8.2f} ({percentage:>5.1f}%)"
-            
-            # Add visual separator for top 5
-            if i == 6:
-                self.result_text.insert(tk.END, "-" * 40 + "\n")
-            
-            # Highlight top 5 with different formatting
+            # Apply different formatting for top 5
             if i <= 5:
-                self.result_text.insert(tk.END, f"{rank} {char_name} ➤ {score_text}\n", "bold")
+                self.result_text.insert(tk.END, line, "bold")
             else:
-                self.result_text.insert(tk.END, f"{rank} {char_name} ➤ {score_text}\n")
+                self.result_text.insert(tk.END, line)
+            
+            # Add separator after top 5
+            if i == 5:
+                self.result_text.insert(tk.END, "-" * 40 + "\n")
         
         # Configure tags for formatting
         self.result_text.tag_configure("bold", font=('Segoe UI', 10, 'bold'))
+        self.result_text.tag_configure("info", font=('Segoe UI', 9, 'italic'))
 
     def load_test_data(self):
         # Set artifact set
@@ -380,13 +427,14 @@ class ArtifactScoreCalculator:
         ]
         
         # Clear existing substat values
-        for stat_combo, value_entry in self.substat_frames:
+        for stat_combo, value_entry in zip(self.substat_vars, self.substat_value_vars):
             stat_combo.set('')
             value_entry.delete(0, tk.END)
         
         # Fill in test substats
         for i, (stat, value) in enumerate(test_substats):
-            stat_combo, value_entry = self.substat_frames[i]
+            stat_combo = self.substat_vars[i]
+            value_entry = self.substat_value_vars[i]
             stat_combo.set(stat)
             value_entry.insert(0, value)
         
@@ -583,7 +631,7 @@ class ArtifactScoreCalculator:
         self.main_stat.set(artifact['main_stat'])
 
         # Set substats
-        for i, (combo, entry) in enumerate(self.substat_frames):
+        for i, (combo, entry) in enumerate(zip(self.substat_vars, self.substat_value_vars)):
             if i < len(artifact['substats']):
                 combo.set(artifact['substats'][i]['stat'])
                 entry.delete(0, tk.END)

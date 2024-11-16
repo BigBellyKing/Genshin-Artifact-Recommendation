@@ -6,13 +6,15 @@
             "Traveler (Geo)",
             "Ningguang",
             "Itto",
-            "Navia"
+            "Navia",
+            "Zhongli"
         ],
         "priority": {
-            "Traveler (Geo)": 0.8,
-            "Ningguang": 0.8,
-            "Itto": 0.8,
-            "Navia": 0.8
+            "Traveler (Geo)": 0.9,
+            "Ningguang": 0.9,
+            "Itto": 0.9,
+            "Navia": 0.9,
+            "Zhongli": 0.9
         }
     },
     "Blizzard Strayer": {
@@ -34,7 +36,7 @@
             "Ayaka": 1.0,
             "Aloy": 1.0,
             "Freminet": 1.0,
-            "Wriothesley": 0.8
+            "Wriothesley": 0.9
         }
     },
     "Crimson Witch of Flames": {
@@ -47,18 +49,16 @@
             "Klee",
             "Gaming",
             "Xiangling",
-            "Yoimiya",
-            "Lyney"
+            "Yoimiya"
         ],
         "priority": {
             "Hu Tao": 1.0,
             "Yanfei": 1.0,
             "Diluc": 1.0,
             "Klee": 1.0,
-            "Gaming": 0.8,
-            "Xiangling": 0.8,
-            "Yoimiya": 0.8,
-            "Lyney": 0.8
+            "Gaming": 0.9,
+            "Xiangling": 0.9,
+            "Yoimiya": 0.9
         }
     },
     "Deepwood Memories": {
@@ -71,7 +71,11 @@
             "Nahida",
             "Traveler (Dendro)",
             "Yaoyao",
-            "Baizhu"
+            "Baizhu",
+            "Alhaitham",
+            "Dori",
+            "Kaveh",
+            "Kirara"
         ],
         "priority": {
             "Collei": 1.0,
@@ -80,7 +84,11 @@
             "Nahida": 1.0,
             "Traveler (Dendro)": 1.0,
             "Yaoyao": 1.0,
-            "Baizhu": 1.0
+            "Baizhu": 1.0,
+            "Alhaitham": 0.9,
+            "Dori": 0.9,
+            "Kaveh": 1.0,
+            "Kirara": 1.0
         }
     },
     "Desert Pavilion Chronicle": {
@@ -88,21 +96,35 @@
         "4pc": "When charged attacks hit opponents, the equipping character's Normal Attack SPD will be increased by 10% while Normal Attack DMG will be increased by 40% for 15s.",
         "recommended_for": [
             "Wanderer",
-            "Xianyun"
+            "Xianyun",
+            "Sethos"
         ],
         "priority": {
             "Wanderer": 1.0,
-            "Xianyun": 1.0
+            "Xianyun": 1.0,
+            "Sethos": 1.0
         }
     },
     "Echoes of an Offering": {
         "2pc": "ATK +18%",
         "4pc": "When Normal Attacks hit opponents, there is a 36% chance that it will trigger Valley Rite, which will increase Normal Attack DMG by 70% of ATK.",
         "recommended_for": [
-            "Ayato"
+            "Ayato",
+            "Beidou",
+            "Klee",
+            "Fischl",
+            "Keqing",
+            "Raiden",
+            "Yae Miko"
         ],
         "priority": {
-            "Ayato": 1.0
+            "Ayato": 1.0,
+            "Beidou": 0.9,
+            "Klee": 0.9,
+            "Fischl": 0.9,
+            "Keqing": 0.9,
+            "Raiden": 0.9,
+            "Yae Miko": 0.9
         }
     },
     "Emblem of Severed Fate": {
@@ -121,7 +143,12 @@
             "Candace",
             "Sigewinne",
             "Gorou",
-            "Sara"
+            "Sara",
+            "Bennett",
+            "Traveler (Electro)",
+            "Yae Miko",
+            "Tighnari",
+            "Alhaitham"
         ],
         "priority": {
             "Lisa": 1.0,
@@ -136,7 +163,12 @@
             "Candace": 1.0,
             "Sigewinne": 1.0,
             "Gorou": 1.0,
-            "Sara": 1.0
+            "Sara": 1.0,
+            "Bennett": 0.9,
+            "Traveler (Electro)": 0.9,
+            "Yae Miko": 1.0,
+            "Tighnari": 0.9,
+            "Alhaitham": 0.9
         }
     },
     "Flower of Paradise Lost": {
@@ -145,12 +177,22 @@
         "recommended_for": [
             "Kaveh",
             "Thoma",
-            "Shinobu"
+            "Shinobu",
+            "Razor",
+            "Fischl",
+            "Yae Miko",
+            "Cyno",
+            "Alhaitham"
         ],
         "priority": {
             "Kaveh": 1.0,
             "Thoma": 1.0,
-            "Shinobu": 1.0
+            "Shinobu": 1.0,
+            "Razor": 1.0,
+            "Fischl": 0.9,
+            "Yae Miko": 0.9,
+            "Cyno": 0.9,
+            "Alhaitham": 1.0
         }
     },
     "Fragment of Harmonic Whimsy": {
@@ -158,11 +200,23 @@
         "4pc": "When the value of a Bond of Life increases or decreases, this character deals 18% increased DMG for 6s. Max 3 stacks.",
         "recommended_for": [
             "Clorinde",
-            "Arlecchino"
+            "Arlecchino",
+            "Beidou",
+            "Klee",
+            "Fischl",
+            "Keqing",
+            "Raiden",
+            "Yae Miko"
         ],
         "priority": {
             "Clorinde": 1.0,
-            "Arlecchino": 1.0
+            "Arlecchino": 1.0,
+            "Beidou": 0.9,
+            "Klee": 0.9,
+            "Fischl": 0.9,
+            "Keqing": 0.9,
+            "Raiden": 0.9,
+            "Yae Miko": 0.9
         }
     },
     "Gilded Dreams": {
@@ -173,21 +227,59 @@
             "Fischl",
             "Razor",
             "Cyno",
-            "Alhaitham"
+            "Alhaitham",
+            "Yanfei",
+            "Thoma",
+            "Gaming",
+            "Diluc",
+            "Hu Tao",
+            "Shinobu",
+            "Sethos",
+            "Yae Miko",
+            "Tighnari",
+            "Nahida"
         ],
         "priority": {
             "Lisa": 1.0,
             "Fischl": 1.0,
             "Razor": 1.0,
             "Cyno": 1.0,
-            "Alhaitham": 1.0
+            "Alhaitham": 1.0,
+            "Yanfei": 1.0,
+            "Thoma": 0.9,
+            "Gaming": 0.9,
+            "Diluc": 0.9,
+            "Hu Tao": 0.9,
+            "Shinobu": 0.9,
+            "Sethos": 0.9,
+            "Yae Miko": 1.0,
+            "Tighnari": 1.0,
+            "Nahida": 0.9
         }
     },
     "Gladiator's Finale": {
         "2pc": "ATK +18%",
         "4pc": "If the wielder of this artifact set uses a Sword, Claymore or Polearm, increases their Normal Attack DMG by 35%.",
-        "recommended_for": [],
-        "priority": {}
+        "recommended_for": [
+            "Arlecchino",
+            "Beidou",
+            "Klee",
+            "Fischl",
+            "Keqing",
+            "Raiden",
+            "Yae Miko",
+            "Clorinde"
+        ],
+        "priority": {
+            "Arlecchino": 0.9,
+            "Beidou": 0.9,
+            "Klee": 0.9,
+            "Fischl": 0.9,
+            "Keqing": 0.9,
+            "Raiden": 0.9,
+            "Yae Miko": 0.9,
+            "Clorinde": 0.9
+        }
     },
     "Golden Troupe": {
         "2pc": "Elemental Skill DMG +20%",
@@ -198,7 +290,9 @@
             "Furina",
             "Fischl",
             "Albedo",
-            "Chiori"
+            "Chiori",
+            "Nahida",
+            "Emilie"
         ],
         "priority": {
             "Yae Miko": 1.0,
@@ -206,7 +300,9 @@
             "Furina": 1.0,
             "Fischl": 1.0,
             "Albedo": 1.0,
-            "Chiori": 1.0
+            "Chiori": 1.0,
+            "Nahida": 0.9,
+            "Emilie": 0.9
         }
     },
     "Heart of Depth": {
@@ -244,6 +340,16 @@
     "Lavawalker": {
         "2pc": "",
         "4pc": "Increases DMG against opponents affected by Pyro by 35%.",
+        "recommended_for": [
+            "Lyney"
+        ],
+        "priority": {
+            "Lyney": 0.9
+        }
+    },
+    "Maiden Beloved": {
+        "2pc": "Character Healing Effectiveness +15%.",
+        "4pc": "Using an Elemental Skill or Burst increases healing received by all party members by 20% for 10s.",
         "recommended_for": [],
         "priority": {}
     },
@@ -278,11 +384,23 @@
         "4pc": "After using an Elemental Skill, gain a 20% Geo DMG Bonus for 10s. While under a shield granted by the Crystallize reaction, the above effect will be increased by 150%, and this additional increase disappears 1s after that shield is lost.",
         "recommended_for": [
             "Ningguang",
-            "Navia"
+            "Navia",
+            "Beidou",
+            "Klee",
+            "Fischl",
+            "Keqing",
+            "Raiden",
+            "Yae Miko"
         ],
         "priority": {
             "Ningguang": 1.0,
-            "Navia": 1.0
+            "Navia": 1.0,
+            "Beidou": 0.9,
+            "Klee": 0.9,
+            "Fischl": 0.9,
+            "Keqing": 0.9,
+            "Raiden": 0.9,
+            "Yae Miko": 0.9
         }
     },
     "Noblesse Oblige": {
@@ -299,7 +417,13 @@
             "Mika",
             "Charlotte",
             "Shenhe",
-            "Traveler (Electro)"
+            "Traveler (Electro)",
+            "Beidou",
+            "Sara",
+            "Raiden",
+            "Collei",
+            "Kirara",
+            "Traveler (Dendro)"
         ],
         "priority": {
             "Amber": 1.0,
@@ -312,7 +436,13 @@
             "Mika": 1.0,
             "Charlotte": 1.0,
             "Shenhe": 1.0,
-            "Traveler (Electro)": 1.0
+            "Traveler (Electro)": 1.0,
+            "Beidou": 0.9,
+            "Sara": 0.9,
+            "Raiden": 0.9,
+            "Collei": 0.9,
+            "Kirara": 1.0,
+            "Traveler (Dendro)": 0.9
         }
     },
     "Nymph's Dream": {
@@ -345,12 +475,18 @@
         "recommended_for": [
             "Kokomi",
             "Sigewinne",
-            "Barbara"
+            "Barbara",
+            "Chevreuse",
+            "Kaveh",
+            "Baizhu"
         ],
         "priority": {
             "Kokomi": 1.0,
             "Sigewinne": 1.0,
-            "Barbara": 1.0
+            "Barbara": 1.0,
+            "Chevreuse": 0.9,
+            "Kaveh": 1.0,
+            "Baizhu": 1.0
         }
     },
     "Pale Flame": {
@@ -390,11 +526,27 @@
         "4pc": "When casting an Elemental Skill, if the character has 15 or more Energy, they lose 15 Energy and Normal/Charged/Plunging Attack DMG is increased by 50% for 10s.",
         "recommended_for": [
             "Ganyu",
-            "Yoimiya"
+            "Yoimiya",
+            "Hu Tao",
+            "Lyney",
+            "Beidou",
+            "Klee",
+            "Fischl",
+            "Keqing",
+            "Raiden",
+            "Yae Miko"
         ],
         "priority": {
             "Ganyu": 1.0,
-            "Yoimiya": 1.0
+            "Yoimiya": 1.0,
+            "Hu Tao": 1.0,
+            "Lyney": 0.9,
+            "Beidou": 0.9,
+            "Klee": 0.9,
+            "Fischl": 0.9,
+            "Keqing": 0.9,
+            "Raiden": 0.9,
+            "Yae Miko": 0.9
         }
     },
     "Song of Days Past": {
@@ -440,13 +592,21 @@
             "Lisa",
             "Keqing",
             "Cyno",
-            "Clorinde"
+            "Clorinde",
+            "Fischl",
+            "Beidou",
+            "Raiden",
+            "Yae Miko"
         ],
         "priority": {
             "Lisa": 1.0,
             "Keqing": 1.0,
             "Cyno": 1.0,
-            "Clorinde": 1.0
+            "Clorinde": 1.0,
+            "Fischl": 0.9,
+            "Beidou": 0.9,
+            "Raiden": 0.9,
+            "Yae Miko": 0.9
         }
     },
     "Thundersoother": {
@@ -464,17 +624,31 @@
         ],
         "priority": {
             "Emilie": 1.0,
-            "Kinich": 0.8
+            "Kinich": 1.0
         }
     },
     "Vermillion Hereafter": {
         "2pc": "ATK +18%",
         "4pc": "After using an Elemental Burst, this character will gain the Nascent Light effect, increasing their ATK by 8% for 16s. When the character's HP decreases, their ATK will be further increased by 10%. This increase can occur this way maximum of 4 times. This effect can be triggered once every 0.8s.",
         "recommended_for": [
-            "Xiao"
+            "Xiao",
+            "Lyney",
+            "Beidou",
+            "Klee",
+            "Fischl",
+            "Keqing",
+            "Raiden",
+            "Yae Miko"
         ],
         "priority": {
-            "Xiao": 1.0
+            "Xiao": 1.0,
+            "Lyney": 0.9,
+            "Beidou": 0.9,
+            "Klee": 0.9,
+            "Fischl": 0.9,
+            "Keqing": 0.9,
+            "Raiden": 0.9,
+            "Yae Miko": 0.9
         }
     },
     "Viridescent Venerer": {
@@ -504,7 +678,7 @@
             "Sayu": 1.0,
             "Traveler (Anemo)": 1.0,
             "Xianyun": 1.0,
-            "Xiao": 0.8
+            "Xiao": 0.9
         }
     },
     "Vourukasha's Glow": {
@@ -512,11 +686,13 @@
         "4pc": "Elemental Skill and Elemental Burst DMG will be increased by 10%. After the equipping character takes DMG, the aforementioned DMG Bonus is increased by 80% for 5s. This effect increase can have 5 stacks. The duration of each stack is counted independently. These effects can be triggered even when the equipping character is not on the field.",
         "recommended_for": [
             "Nilou",
-            "Kirara"
+            "Kirara",
+            "Dehya"
         ],
         "priority": {
             "Nilou": 1.0,
-            "Kirara": 1.0
+            "Kirara": 1.0,
+            "Dehya": 0.9
         }
     },
     "Wanderer's Troupe": {
@@ -526,13 +702,21 @@
             "Sethos",
             "Aloy",
             "Tighnari",
-            "Ganyu"
+            "Ganyu",
+            "Fischl",
+            "Razor",
+            "Yae Miko",
+            "Alhaitham"
         ],
         "priority": {
             "Sethos": 1.0,
             "Aloy": 1.0,
             "Tighnari": 1.0,
-            "Ganyu": 1.0
+            "Ganyu": 1.0,
+            "Fischl": 0.9,
+            "Razor": 0.9,
+            "Yae Miko": 0.9,
+            "Alhaitham": 1.0
         }
     }
 }

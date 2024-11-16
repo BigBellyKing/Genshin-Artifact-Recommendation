@@ -48,6 +48,39 @@ A comprehensive tool for analyzing and recommending artifacts in Genshin Impact.
    - View all your level 20 artifacts as cards
    - Click any card to see character rankings
 
+## Artifact Ranking System
+
+The application uses a comprehensive ranking system to evaluate artifacts:
+
+### SS Rank 
+- Perfect combination of on-set main stat and best-in-slot substats
+- Nearly all substat rolls into highly desired stats for the character
+- Represents the ideal artifact piece
+
+### S Rank 
+- Correct artifact set
+- Appropriate main and substats
+- Significantly improves character performance
+- Minor improvements possible but excellent overall
+
+### A Rank 
+- Either correct set or appropriate substats
+- May need some substat improvements
+- Serviceable piece for most content
+- Good temporary option until SS/S rank found
+
+### B Rank 
+- Usable but suboptimal
+- Either wrong set or suboptimal substats
+- Should be replaced when better artifacts are obtained
+- Adequate for early/mid-game content
+
+### C Rank 
+- Neither correct set nor appropriate stats
+- May be useful for other characters
+- Recommended to find replacement
+- Consider as temporary placeholder
+
 ## Supported Features
 - All artifact sets from version 4.3
 - Character-specific stat weightings based on community guides
